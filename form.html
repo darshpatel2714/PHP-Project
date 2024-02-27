@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style=linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);">
+    <form name="myform" method="post" action="#" onsubmit="return formvalidation();" style="border-style: double; border-width: 25px;">
+        <img src="img/lg3.png" style="height: 200px; margin-bottom: 50px;">&nbsp;&nbsp;&nbsp;<center><h1 style="color: brown;">REGISTRATION FROM</h1></center>
+    <center><p>Name:<br><input type="name" name="name"></p>
+    <p>password:<br><input type="password" name="password"></p>
+    <p>confirm password:<br><input type="password" name="confirmpassword"></p>
+    <p>gender:<br><input type="radio"  name="gender"  >male
+        <input type="radio"  name="gender" >female</p><br>
+        Select_your_city:-<select>
+
+            <OPtion>Ahmedabad</OPtion>
+            <OPtion>Mumbai</OPtion>
+            <OPtion>Chennai</OPtion>
+            <OPtion>Delhi</OPtion>
+            <OPtion>Hyderabad</OPtion>
+            <OPtion>Goa</OPtion>
+            </select><br><br>
+
+            <p>date_of_birth:<br><input type="datetime-local" name="date_of_birth"></p><br>
+            <p>Email:<br><input type="email" name="Email" placeholder="write your email@"></p>
+    
+    <input type="submit" value="register"> <br></center>
+</form>
+    <script>
+       function formvalidation(event){
+        event.preventDefault();
+           var namevalue=document.myform.name.value.trim();
+           var password=document.myform.password.value.trim();
+           var confirmpassword=document.myform.confirmpassword.value.trim();
+           var gender=document.myform.gender.value.trim();
+           var select_your_city=document.myform.select_your_city.value.trim();
+           var date_of_birth=document.myform.date_of_birth.value.trim();
+           var Email=document.myform.Email.value.trim();
+           var array=[];
+        
+         if(namevalue == null || namevalue ==""){
+             alert("please enter name");
+             return false;
+         }
+
+         if(password == null || password ==""){
+             alert("please enter password");
+             return false;
+         }
+
+         if(confirmpassword == null || confirmpassword ==""){
+             alert("please enter confirmpassword");
+             return false;
+         }
+         console.log(namevalue);
+         return false;
+
+         if(gender == null || gender ==""){
+             alert("please select your gender");
+             return true;
+         }
+
+         if(select_your_city == null || select_your_city ==""){
+             alert("please select your city");
+             return false;
+         }
+         
+         if(date_of_birth == null || date_of_birth==""){
+             alert("please select your dob");
+             return false;
+         }
+         if(Email == null || Email==""){
+             alert("please write your email")
+         }
+         const formData = {
+            nameValue,
+            password,
+            confirm,
+            number,
+            mailid,
+            gen,
+        };
+        if(localStorage.getItem("productList") === null){
+            array.push(formData);
+            var stringArray=JSON.stringify(array);
+            localStorage.setItem("productList",stringArray);
+        }
+        else{
+            var storage=localStorage.getItem("productList");
+            var data=JSON.parse(storage);
+            data.push(formData);
+            var stringArray=JSON.stringify(data);
+            localStorage.setItem("productList",stringArray);
+        }
+    
+        return true;
+        
+    }
+       
+    </script>
+</body>
+</html>

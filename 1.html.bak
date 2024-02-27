@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>patel Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="1.css">
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <ul>
+        <li class="brand"><i class="fab fa-spotify"></i> Patel-Music</li>
+        <li>Premium</li>
+        <li>Download</li>
+        <li><a href="au.html">Listen</a></li>
+      </ul>
+    </nav>
+
+    <div class="imge">
+      <img src="2.png" alt="">
+    </div>
+
+    <div class="hd">
+      Feel   The Music ♥</i>
+    </div>
+    <div class="content">
+      <em>One good thing about <br> music,When it hits you, <br> you feel no pain. <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Darsh patel</em>
+    </div>
+
+    <b href="">JOIN NOW</b>
+
+  </body>
+</html>
